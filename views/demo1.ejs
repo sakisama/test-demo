@@ -1,0 +1,174 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/demo1.css">
+  <head>
+
+  <body>
+    <label>/*通过鼠标滚轮或"pre","next"按钮进行轮盘滚动。目前还有bug，所以若鼠标在下列列表上时使用鼠标滚轮会出现排列问题，此问题已在博文中提到,<a href="http://codemao.com:8001/blogs/53fc2366847a82780a6229e4" target="_blank">点击传送</a>*/</label>
+    <div id="panel"></div>
+    <a id="preBtn" href="" class="btn-pre"><-pre</a>
+    <a id="nextBtn" href="" class="btn-next">next-></a>
+  </body>
+
+<script>
+  var preBtn = document.getElementById("preBtn");
+  var nextBtn = document.getElementById("nextBtn");
+  var panel = document.getElementById("panel");
+  var list = panel.getElementsByTagName("div");
+  var num = 15;
+  var delayTime=null;
+  var objMouseIn=null;
+  function createList(){
+    var html="";
+    for(var i=0; i<num ;i++){
+      html += "<div id='data"+i+"' class='list'style='left:"+40*i+"px'>"+i;
+      html += "<span class='moreMsg'>data "+i+" is really awesome!Don't you think so?</span></div>";
+    }
+    panel.innerHTML = html;
+  }
+
+  function pre(){
+    var id;
+    for(var i=0;i<num; i++){
+      id = parseInt(list[i].id.slice(4));
+      id = id + 1;
+      if(id >= num){
+          id = 0;
+      }
+      list[i].id = "data"+id;
+      var pos = parseInt(list[i].style.left);
+      pos += 40;
+      if(pos >= num*40){
+        pos = 0;
+      }
+      list[i].style.left=pos+"px";
+      
+    }
+    return false;
+  }
+
+  function next(){
+    var list = panel.getElementsByTagName("div");
+    var id;
+    for(var i=0;i<num; i++){
+      id = parseInt(list[i].id.slice(4));
+      id = id - 1;
+      if(id < 0)
+          id = num-1;
+      list[i].id = "data"+id;
+      var pos = parseInt(list[i].style.left);
+      pos -= 40;
+      if(pos < 0){
+        pos = (num-1)*40;
+      }
+      list[i].style.left=pos+"px";
+    }
+    return false;
+  }
+
+  function scroll(e){
+   if(delayTime!=null){
+     clearTimeout(delayTime);
+   }
+   if(objMouseIn!=null){
+    var thisTagSpan = objMouseIn.getElementsByTagName("span")[0];
+    thisTagSpan.style.display="none";
+   }
+   delayTime = setTimeout(function(){
+   e = e || window.event;
+   if(e.wheelDelta){//IE,Opera,Chrome
+     if(e.wheelDelta > 0){
+       pre();
+     }
+     else if(e.wheelDelta < 0){
+       next();
+     }
+    }
+    else if(e.detail){//firefox 
+     if(e.detail < 0){
+       pre();
+     }
+     else if(e.detail > 0){
+       next();
+     }
+    }},100);
+  }
+
+  function mouseIn(){
+   var thisId = this.getAttribute("id");
+   var isdata3 = thisId=="data3" ? true:false;
+   var isdata4 = thisId=="data4" ? true:false;
+   var isdata5 = thisId=="data5" ? true:false;
+   var objTag = document.getElementById(thisId);
+   var buffer;
+   if(isdata3){
+     buffer = ["data4","data5","data6","data7","data8"];
+     objTag.style.width = "100px";
+   }       
+    
+   else if(isdata4){
+     buffer = ["data5","data6","data7","data8"];
+     objTag.style.width = "100px";
+   }
+   
+   else if(isdata5){
+     buffer = ["data6","data7","data8"];
+     objTag.style.width = "100px";
+   }
+   else{
+     buffer = [];
+   }
+   for(var i=0;i<buffer.length;i++){
+       var obj = document.getElementById(buffer[i]);
+       var pos = parseInt(obj.style.left);
+       pos += 80;
+       obj.style.left = pos;
+   }
+  }
+  function mouseOut(){
+   var objthis = objMouseIn||this;
+   var thisId = objthis.getAttribute("id");
+   var isdata3 = thisId=="data3" ? true:false; 
+   var isdata4 = thisId=="data4" ? true:false; 
+   var isdata5 = thisId=="data5" ? true:false;
+   var buffer;
+   if(isdata3){
+     buffer = ["data4","data5","data6","data7","data8"];
+     document.getElementById(thisId).style.width = "40px";
+   }  
+    
+   else if(isdata4){
+     buffer = ["data5","data6","data7","data8"];
+     document.getElementById(thisId).style.width = "40px";
+   }
+
+   else if(isdata5){
+     buffer = ["data6","data7","data8"];
+     document.getElementById(thisId).style.width = "40px";
+   }
+   else{
+     buffer = [];
+   }
+   for(var i=0;i<buffer.length;i++){
+       var obj = document.getElementById(buffer[i]);
+       var pos = parseInt(obj.style.left);
+       pos -= 80;
+       obj.style.left = pos;
+   }
+  }
+  window.onload = function(){
+   createList();
+   nextBtn.onclick = next;
+   preBtn.onclick = pre;
+   if(document.addEventListener){//firefox
+     document.addEventListener('DOMMouseScroll',scroll,false);
+   }
+     document.onmousewheel = scroll;
+   for(var i=0;i<num;i++){
+     list[i].onmouseover = mouseIn;
+     list[i].onmouseout = mouseOut;
+   } 
+  }
+
+  </script>
+</html>

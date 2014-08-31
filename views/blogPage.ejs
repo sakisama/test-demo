@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<%include header%>
+	<script src="/javascripts/getArticles.js"></script>
+	<script src='/javascripts/myTools.js'></script>
+	 <link rel="stylesheet" href="/stylesheets/componentTool.css">
+	<link rel="stylesheet" href="/stylesheets/header-footer.css">
+	<link rel="stylesheet" href="/stylesheets/blogPage.css">
+	
+	<link rel="stylesheet" href="/stylesheets/font-awesome.css">
+	<script>
+	$(document).ready(function(){
+		
+		$(".angle-btn").mouseenter(function(){
+			$(".slide-tag").addClass("slide-tag-anima");
+		});
+		$(".angle-btn").mouseleave(function(){
+			$(".slide-tag").removeClass("slide-tag-anima");
+		});
+		$(".angle-btn").mouseenter(function(){
+			$(".cover-color").addClass("cover-color-anima");
+		});
+		$(".angle-btn").mouseleave(function(){
+			$(".cover-color").removeClass("cover-color-anima");
+		});
+
+		$(".angle-btn").click(function(){
+			var scrollDistance = parseInt($('#blog-text').offset().top);
+			$("html,body").animate({scrollTop: scrollDistance}, 1000);
+		});
+	});
+		
+
+	</script>
+</head>
+
+<body>
+	<header class="showPanel">
+		<div class="panel-main">
+			<div class="panel-intro panel-inner">
+				<div class="panel-content">
+					<h1 class="panel-title">
+							<i class='fa fa-repeat'></i>
+					</h1>
+					<h2 class="panel-time"></h2>
+				</div>
+
+				<div  class="slide-more">
+					<h1 class="slide-tag">继续阅读</h1>
+					<i class="angle-btn fa fa-angle-down"></i>			
+				</div>
+				
+			</div>
+			<div class="cover-panel cover-color"></div>
+		</div>
+	</header>
+
+	<div id="blog-text" class="blog-content container"></div>
+	<div class="share-toolbar container">
+		<h4 for="bdsharebuttonbox">分享一下:</h4>
+		<div class="bdsharebuttonbox">
+			<a href="#" class="bds_more" data-cmd="more"></a>
+			<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+			<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+			<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+			<a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+			<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+		</div>
+	</div>
+	<div class="msg">
+		<div class="msg-panel container ">
+			<h2 class="comments-header"><i class="fa fa-comments"></i> comments</h2>
+			<div id="SOHUCS"></div>
+		</div>
+	</div>
+	<footer class="siteFooter">
+		<div class="siteInfo">
+			<section class="copyright"><a href="codemao.com:8001">CodeCat </a>© 2014 • All rights reserved.</section>
+			 <section  class="aboutsite">使用nodejs+mongodb构建，感谢TJ制作的<a href="http://expressjs.com/" target="_blank">express</a>框架让我方便的感受了一把MVC的魅力</section>
+			<section class="powerdby">本站由<a target="_blank" href="http://weibo.com/u/1942959077">@codeMao</a>创建</section>
+		</div>
+	</footer>
+
+
+	<script>
+	    (function(){
+    var appid = 'cyrjEFRl8',
+    conf = 'prod_657dbd798480db22bc7db13933aa93c7';
+    var doc = document,
+    s = doc.createElement('script'),
+    h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
+    s.type = 'text/javascript';
+    s.charset = 'utf-8';
+    s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
+    h.insertBefore(s,h.firstChild);
+  })()
+	var blogId = window.location.pathname.split("/")[2];
+	showOneBlog(blogId);
+	/*var title = $(".blog-title").html();
+	setDuoShuo(blogId,title)*/
+	$("#SOHUCS").attr("sid",blogId);
+	window._bd_share_config={
+		"common":{
+			"bdSnsKey":{},
+			"bdText":"",
+			"bdMini":"2",
+			"bdMiniList":false,
+			"bdPic":"","bdStyle":"1","bdSize":"24"
+		},
+		"share":{}
+	};
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src='/ckeditor/ckeditor.js'></script>
+<script src='/javascripts/showRssInHomePage.js'></script>
+ <%include header%>
+<script>
+
+$(document).ready(function(){
+
+$('#iframe').load('rssDiv');
+
+//$('#head-div').parallax('50%', 0.2);
+
+$('[href]').click(function(){
+  var a = $('#'+this.href.split('#')[1]).offset().top;
+  $('html,body').animate({scrollTop:a}, 'slow');
+});
+$('.head-div').css({'height':($(window).height())+'px'});
+$('#navbar1').sticky({topSpacing:0});
+
+
+//$('.ufo').pan({fps: 30, speed: 1, dir: 'left'});
+getRssInHomePage();
+autoSetHeight();
+});
+
+function autoSetHeight(){
+  for(var i=0; i<4; i++)
+    $('.wrapBtn').eq(i).css('width',$('.wrapBtn').eq(i).css('height'));
+
+  $('.ufo').css('width',$('.ufo').css('height'));
+  $('.moon').css('height',$('.moon').css('width'));
+}
+
+$(window).resize(function(){
+  $('.head-div').css({'height':($(window).height())+'px'});
+  autoSetHeight();
+});
+
+$(function(){
+  $('#head-div').css({'height':($(window).height())+'px'});
+  $('.span-div').airport([ 'WELCOME', 'mxxblog' ]);
+  //$('#head-div').pan({fps: 30, speed: 0.2, dir: 'left',depth:10});
+  $('#cloudBack').pan({fps: 30, speed: 1, dir: 'left', depth:20});
+  $('#cloudFront').pan({fps: 30, speed: 3, dir: 'left', depth:40});
+});
+</script>
+
+
+
+</head>
+<body >
+
+
+<div id='head-div' class='head-div'>
+   <div class='moon'> <img src='/images/moon.png' alt='' /></div>
+   <div id='ufo' class='ufo'><span class='logo-big spanfont span-div' style='z-index:10'></span></div>
+<div id='cloudBack' class='stage'></div>
+<div id='cloudFront' class='stage'></div>
+</div>
+
+
+
+<div class='planetDiv planetDiv1'><a href="#">
+  <div  id='wrapBtn1' class='wrapBtn'>
+      <div class='img'><img src="/images/gravity-field-blue.png" alt="img"> </div>
+  </div>
+</a></div>
+
+<div class='planetDiv planetDiv2'><a href="#">
+    <div  id='wrapBtn2' class='wrapBtn'>
+      <div class='img'><img src="/images/gravity-field-blue.png" alt="">  </div>   
+  </div>
+</a></div>
+
+<div class='planetDiv planetDiv3'><a href="#">
+    <div  id='wrapBtn3' class='wrapBtn'>
+      <div class='img'><img src="/images/gravity-field-blue.png" alt="">  </div>   
+  </div>
+</a></div>
+
+<div class='planetDiv planetDiv4'><a href="#">
+    <div  id='wrapBtn4' class='wrapBtn'>
+      <div class='img'><img src="/images/gravity-field-blue.png" alt=""> </div>    
+  </div>
+</a></div>
+
+<%include navbar%>
+
+
+
+<% if (!user) { %>
+ <div id='iframe'> </div>
+<% } else { %>
+<% include say %>
+<% } %>
+<%include posts%>
+<div id='comed'>
+<textarea name='editor1' id='editor1' cols='80' rows='10'>
+          This is my place will be replaced
+</textarea>
+  <script>
+    CKEDITOR.replace('editor1');
+  </script>
+</div>
+
+<script type='text/javascript' charset='utf-8'>
+
+</script>
+</body>
+</html>

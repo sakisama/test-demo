@@ -1,0 +1,26 @@
+{
+  "name": "website",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "express": "~4.2.0",
+    "static-favicon": "~1.0.0",
+    "morgan": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "body-parser": "~1.0.0",
+    "debug": "~0.7.4",
+    "ejs": "~0.8.5",
+     "mongodb": "*",
+    "connect-mongo": "*",
+    "express-partials": "*",
+    "jquery": "^2.1.1",
+    "jsdom": "^0.10.5",
+    "feedparser":"0.16.6",
+   "request":"2.33.0",
+   "iconv":"2.0.7",
+   "mongoose":"3.8.7"
+  }
+}

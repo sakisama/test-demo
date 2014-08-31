@@ -1,0 +1,145 @@
+.bdsharebuttonbox{
+	margin: 0 auto;
+}
+.comments-header{
+  color: #aeaeae;
+  text-transform: uppercase;
+  font-size: 1.6em;
+}
+#changyan_floatbar_wrapper{
+  display:none!important;  
+}
+.head-gold-w{
+  display:none!important;
+}
+.fa-repeat{
+font-size:2em;
+color:#95a5a6;
+ animation: loading 1s linear infinite;
+-moz-animation: loading 1s linear infinite; /* Firefox */
+-webkit-animation: loading 1s linear infinite;  /* Safari 和 Chrome */
+-o-animation: loading 1s linear infinite;
+}
+
+.head-menu{
+  background-color: #343131;/* rgba(13, 71, 77, 0.9)*/
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  z-index: 100;
+  border-radius: 0;
+  border-color: transparent;
+transition: ease-in-out .3s;
+-moz-transition: ease-in-out .3s; /* Firefox 4 */
+-webkit-transition: ease-in-out .3s; /* Safari 和 Chrome */
+-o-transition: ease-in-out .3s; /* Opera */
+
+  -webkit-transform: translateY(-58px);
+-moz-transform: translateY(-58px);
+-ms-transform: translateY(-58px);
+-o-transform: translateY(-58px);
+transform: translateY(-58px);
+}
+
+.is-visible{
+  -webkit-transform: translateY(0);
+-moz-transform: translateY(0);
+-ms-transform: translateY(0);
+-o-transform: translateY(0);
+transform: translateY(0);
+}
+
+#more .fa-repeat{
+  font-size: 1em;
+  color: #51545b;
+}
+.msg{
+	position: relative;
+  width:100%;
+  background: #ececec;
+  box-shadow: 0px -4px 7px -7px #171717;
+}
+.msg-panel{
+  max-width: 870px;
+}
+
+
+.share-toolbar{
+	border-top: 1px dashed #e5e5e5;
+	padding-top: 30px;
+	padding-bottom: 30px;
+  max-width: 870px;
+
+}
+.share-toolbar h4{
+	letter-spacing: .5rem;
+}
+
+@keyframes loading
+{
+  from {transform:rotate(0deg);
+-ms-transform:rotate(0deg); /* IE 9 */
+-moz-transform:rotate(0deg); /* Firefox */
+-webkit-transform:rotate(0deg); /* Safari and Chrome */
+-o-transform:rotate(0deg); /* Opera */}
+
+to {
+  transform:rotate(360deg);
+-ms-transform:rotate(360deg); /* IE 9 */
+-moz-transform:rotate(360deg); /* Firefox */
+-webkit-transform:rotate(360deg); /* Safari and Chrome */
+-o-transform:rotate(360deg); /* Opera */
+}
+  
+}
+
+@-moz-keyframes loading /* Firefox */
+{
+  from {transform:rotate(0deg);
+-ms-transform:rotate(0deg); /* IE 9 */
+-moz-transform:rotate(0deg); /* Firefox */
+-webkit-transform:rotate(0deg); /* Safari and Chrome */
+-o-transform:rotate(0deg); /* Opera */}
+
+to {
+  transform:rotate(360deg);
+-ms-transform:rotate(360deg); /* IE 9 */
+-moz-transform:rotate(360deg); /* Firefox */
+-webkit-transform:rotate(360deg); /* Safari and Chrome */
+-o-transform:rotate(360deg); /* Opera */
+}
+}
+
+@-webkit-keyframes loading /* Safari 和 Chrome */
+{
+  from {transform:rotate(0deg);
+-ms-transform:rotate(0deg); /* IE 9 */
+-moz-transform:rotate(0deg); /* Firefox */
+-webkit-transform:rotate(0deg); /* Safari and Chrome */
+-o-transform:rotate(0deg); /* Opera */}
+
+to {
+  transform:rotate(360deg);
+-ms-transform:rotate(360deg); /* IE 9 */
+-moz-transform:rotate(360deg); /* Firefox */
+-webkit-transform:rotate(360deg); /* Safari and Chrome */
+-o-transform:rotate(360deg); /* Opera */
+}
+}
+
+@-o-keyframes loading /* Opera */
+{
+  from {transform:rotate(0deg);
+-ms-transform:rotate(0deg); /* IE 9 */
+-moz-transform:rotate(0deg); /* Firefox */
+-webkit-transform:rotate(0deg); /* Safari and Chrome */
+-o-transform:rotate(0deg); /* Opera */}
+
+to {
+  transform:rotate(360deg);
+-ms-transform:rotate(360deg); /* IE 9 */
+-moz-transform:rotate(360deg); /* Firefox */
+-webkit-transform:rotate(360deg); /* Safari and Chrome */
+-o-transform:rotate(360deg); /* Opera */
+}
+}

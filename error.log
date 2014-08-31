@@ -1,0 +1,120 @@
+[Mon Apr 28 2014 11:31:53 GMT+0800 (CST)] /pk
+Error: Not Found
+    at Layer.app.use.meta [as handle] (/home/philosophy/myweb/myblog/app.js:62:15)
+    at trim_prefix (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:226:17)
+    at c (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:198:9)
+    at Function.proto.process_params (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:251:12)
+    at next (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:189:19)
+    at next (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:166:38)
+    at next (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:166:38)
+    at next (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:166:38)
+    at next (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:166:38)
+    at next (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:166:38)
+[Mon Apr 28 2014 11:32:03 GMT+0800 (CST)] /llll
+Error: Not Found
+    at Layer.app.use.meta [as handle] (/home/philosophy/myweb/myblog/app.js:62:15)
+    at trim_prefix (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:226:17)
+    at c (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:198:9)
+    at Function.proto.process_params (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:251:12)
+    at next (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:189:19)
+    at next (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:166:38)
+    at next (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:166:38)
+    at next (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:166:38)
+    at next (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:166:38)
+    at next (/home/philosophy/myweb/myblog/node_modules/express/lib/router/index.js:166:38)
+[Fri Aug 22 2014 01:14:01 GMT+0800 (CST)] /stylesheets/myconfig.css
+Error: Error setting TTL index on collection : sessions
+    at /home/saki/website/node_modules/connect-mongo/lib/connect-mongo.js:161:23
+    at /home/saki/website/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/db.js:1404:28
+    at /home/saki/website/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/db.js:1542:30
+    at /home/saki/website/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/cursor.js:159:22
+    at commandHandler (/home/saki/website/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/cursor.js:678:48)
+    at Db._executeQueryCommand (/home/saki/website/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/db.js:1802:12)
+    at Cursor.nextObject (/home/saki/website/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/cursor.js:729:13)
+    at Cursor.toArray (/home/saki/website/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/cursor.js:158:10)
+    at Cursor.toArray (/home/saki/website/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/scope.js:10:20)
+    at /home/saki/website/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/db.js:1541:65
+[Fri Aug 22 2014 01:14:01 GMT+0800 (CST)] /stylesheets/componentTool.css
+Error: no open connections
+    at Db._executeQueryCommand (/home/saki/website/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/db.js:1802:21)
+    at Cursor.nextObject (/home/saki/website/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/cursor.js:729:13)
+    at Cursor.nextObject (/home/saki/website/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/scope.js:22:20)
+    at Collection.findOne (/home/saki/website/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/collection/query.js:145:10)
+    at /home/saki/website/node_modules/connect-mongo/lib/connect-mongo.js:214:18
+    at MongoStore._get_collection (/home/saki/website/node_modules/connect-mongo/lib/connect-mongo.js:148:21)
+    at MongoStore.get (/home/saki/website/node_modules/connect-mongo/lib/connect-mongo.js:213:10)
+    at Layer.session [as handle] (/home/saki/website/node_modules/connect/node_modules/express-session/index.js:324:11)
+    at trim_prefix (/home/saki/website/node_modules/express/lib/router/index.js:240:15)
+    at /home/saki/website/node_modules/express/lib/router/index.js:208:9
+[Sun Aug 24 2014 12:14:05 GMT+0800 (CST)] /blog-images/beginJs1
+Error: Not Found
+    at Layer.app.use.meta [as handle] (/home/saki/website/app.js:63:15)
+    at trim_prefix (/home/saki/website/node_modules/express/lib/router/index.js:240:15)
+    at /home/saki/website/node_modules/express/lib/router/index.js:208:9
+    at Function.proto.process_params (/home/saki/website/node_modules/express/lib/router/index.js:269:12)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:199:19)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+[Sun Aug 24 2014 12:15:42 GMT+0800 (CST)] /blog-images/beginJs1.jpg
+Error: Not Found
+    at Layer.app.use.meta [as handle] (/home/saki/website/app.js:63:15)
+    at trim_prefix (/home/saki/website/node_modules/express/lib/router/index.js:240:15)
+    at /home/saki/website/node_modules/express/lib/router/index.js:208:9
+    at Function.proto.process_params (/home/saki/website/node_modules/express/lib/router/index.js:269:12)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:199:19)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+[Sun Aug 24 2014 12:15:46 GMT+0800 (CST)] /blog-images/beginJs1.jpg
+Error: Not Found
+    at Layer.app.use.meta [as handle] (/home/saki/website/app.js:63:15)
+    at trim_prefix (/home/saki/website/node_modules/express/lib/router/index.js:240:15)
+    at /home/saki/website/node_modules/express/lib/router/index.js:208:9
+    at Function.proto.process_params (/home/saki/website/node_modules/express/lib/router/index.js:269:12)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:199:19)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+[Sun Aug 24 2014 12:15:50 GMT+0800 (CST)] /blog-images/beginJs1.jpg
+Error: Not Found
+    at Layer.app.use.meta [as handle] (/home/saki/website/app.js:63:15)
+    at trim_prefix (/home/saki/website/node_modules/express/lib/router/index.js:240:15)
+    at /home/saki/website/node_modules/express/lib/router/index.js:208:9
+    at Function.proto.process_params (/home/saki/website/node_modules/express/lib/router/index.js:269:12)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:199:19)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+[Sun Aug 24 2014 23:29:47 GMT+0800 (CST)] /blog-images/513e7b1a4c2ca.jpg
+Error: Not Found
+    at Layer.app.use.meta [as handle] (/home/saki/website/app.js:63:15)
+    at trim_prefix (/home/saki/website/node_modules/express/lib/router/index.js:240:15)
+    at /home/saki/website/node_modules/express/lib/router/index.js:208:9
+    at Function.proto.process_params (/home/saki/website/node_modules/express/lib/router/index.js:269:12)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:199:19)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+[Sun Aug 24 2014 23:29:52 GMT+0800 (CST)] /demo/1
+Error: Not Found
+    at Layer.app.use.meta [as handle] (/home/saki/website/app.js:63:15)
+    at trim_prefix (/home/saki/website/node_modules/express/lib/router/index.js:240:15)
+    at /home/saki/website/node_modules/express/lib/router/index.js:208:9
+    at Function.proto.process_params (/home/saki/website/node_modules/express/lib/router/index.js:269:12)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:199:19)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)
+    at next (/home/saki/website/node_modules/express/lib/router/index.js:176:38)

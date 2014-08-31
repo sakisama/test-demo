@@ -1,0 +1,23 @@
+ <div class="intro-main panel-intro">
+      <div class="head-pic">
+        <a href=""><img src="/images/user-img.jpg"alt="img"></a>
+      </div>
+      <h1>Code.Cat</h1>
+      <span class="panel-subtitle">关注人文、技术</span>
+      <hr class="split-line split-line1"></hr>
+      <p id="mydesc" class="panel-desc">你好，欢迎来到我的实验场，我是毛潇潇，现为一只野生的web前端程序猿。喜coding，好摄影，矢志不渝追求创作！</p>
+      <hr class="split-line split-line2"></hr>
+      <div class="head-nav">
+          <ul class="nav-scroll  nav-list">
+               <li class="nav-item"><a  href="#news" name="news">资讯</a></li>
+            <li class="nav-item"><a href="#myblog" name="myblog">博客</a></li>
+
+            <li class="nav-item"><a  href="#about" name="about" >关于</a></li>
+            <li class="nav-item"><a  href="#msg" name="msg" >留言</a></li>
+          </ul>
+             <ul class="social-list nav-list">
+            <li ><a href=""><i class="fa fa-weibo"></i></a></li>
+            <li ><a href=""><i class="fa fa-envelope "></i></a></li>
+          </ul>
+      </div>
+  </div>

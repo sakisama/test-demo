@@ -1,0 +1,108 @@
+html,body{ 
+margin:0px; 
+height:100%; 
+}
+body{
+	background: #fefefe;
+	color: #424242;
+	font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3" "Helvetica Neue", "微软雅黑", Tohoma;
+	font-size: 18px;
+}
+a:hover{
+	text-decoration: none;
+}
+p {
+	line-height: 1.8;
+}
+
+.angle-btn{
+	font-size: 8rem;
+	color: rgba(255, 255, 255, 0.8);
+	cursor: pointer;
+	opacity: 0.8;
+}
+.angle-btn:hover{
+	text-shadow: 0 1px 5px #d3d3d3;
+}
+.blog-content{
+	min-height: 200px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	max-width: 889px;
+	border-top: 
+}
+.cover-color{
+	background-color: #000000;
+	opacity: 0.7;
+	background-image: none;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+}
+.cover-color-anima{
+	opacity: 0.2;
+}
+.panel-title{
+	text-shadow: 0 1px 5px #d3d3d3;
+	font-size: 5rem;
+	letter-spacing: .2rem;
+}
+.panel-title span{
+	padding: 0;
+	margin: 0;
+}
+.panel-title .fa-repeat{
+	font-size: 3rem;
+	color: #FFF;
+}
+.panel-time{
+	font-size: 2.4rem;
+	opacity: 1;
+	text-transform: uppercase;
+}
+.panel-content{
+	max-width: 80%;
+	height: 20rem;
+}
+.showPanel{
+	background-image: url('/images/black_linen_v2.png');
+	box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2);
+}
+.slide-more{
+	position: absolute;
+	text-decoration: none;
+	bottom: 4rem;
+	left: 0;
+	right:0;
+}
+.slide-tag{
+
+	font-size: 2.4rem;
+	font-weight: 300;
+	letter-spacing: .3rem;
+	color: rgba(255, 255, 255, 0);
+	text-decoration: none;
+	  -webkit-transition: all .5s ease-out;
+	  -moz-transition: all .5s ease-out;
+	  -ms-transition: all .5s ease-out;
+	  -o-transition: all .5s ease-out;
+	  -webkit-transform: translateY(-30px);
+	  -moz-transform: translateY(-30px);
+	  -ms-transform: translateY(-30px);
+	  -o-transform: translateY(-30px);
+	  transform: translateY(-30px);
+}
+
+.slide-tag-anima{
+	margin-top:20px; 
+	color: rgba(255, 255, 255, 0.95);
+	text-decoration: none;
+	-webkit-transform: translateY(0);
+	-moz-transform: translateY(0);
+	-ms-transform: translateY(0);
+	-o-transform: translateY(0);
+	transform: translateY(0);
+}
+
+

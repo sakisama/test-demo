@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <title>CodeCat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<script src="/javascripts/getArticles.js"></script>
+
+<script src="/javascripts/main.js"></script>
+ 
+  <link rel="stylesheet" href="/stylesheets/animate.css">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.css">
+  <link rel="stylesheet" href="/stylesheets/myconfig.css">
+  <link rel="stylesheet" href="/stylesheets/header-footer.css">
+  <link rel="stylesheet" href="/stylesheets/componentTool.css">
+
+     
+  </head>
+<body>
+<audio id="myaudio" loop="loop"></audio>
+<span class="responsive-menu">
+  <i class="fa fa-list mobile-btn"></i>
+  <i class="fa fa-angle-up mobile-btn hidden"></i> 
+</span>
+  <header class="showPanel">
+ 
+    <div class="panel-main">
+    <div class="panel-intro panel-inner">
+    <div class="panel-content">
+
+        <div class="imgBox">
+          <a href="#">
+             <div class="bilibili bilibili-anima"></div>
+            <div class="img panel-avatar">
+              <img class="headPic-logo" src="/images/user-img.jpg"alt="img">
+            </div>
+
+            <div class="img-info">
+              <div class="avatar-cover"></div>
+              <div class="describe-info">
+                <div class="audio"><i class="fa fa-play"></i></div>
+                  
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+      <h1 class="panel-title">Code.Cat</h1>
+      <span class="panel-subtitle">关注人文、技术</span>
+      <hr class="split-line split-line1"></hr>
+      <p class="myDescription">你好，我是毛潇潇，现为一只野生的web前端程序猿，大概早年受所学专业所属圈子的"荼毒"，向往自由，乐于分享。喜coding，好摄影，矢志不渝追求创作！</p>
+       <hr class="split-line split-line2"></hr>
+       <div class="head-nav" id="headNav">
+       <ul class="nav-scroll  nav-list">
+            <li class="nav-item"><a  href="#news" name="news">资讯</a></li>
+         <li class="nav-item"><a href="#blog" name="blog">博客</a></li>
+         <li class="nav-item"><a  href="#msg" name="msg" >留言</a></li>
+       </ul>
+          <ul class="social-list nav-list">
+         <li ><a href="http://weibo.com/u/1942959077" target="_blank"><i class="fa fa-weibo"></i></a></li>
+         <li ><a href="mailto:369512841@qq.com"><i class="fa fa-envelope "></i></a></li>
+       </ul>
+   </div>
+
+  </div>
+</div>
+
+  <div class="cover-panel cover-color"></div>
+
+</div>
+</header>
+<main>
+<section  id="news"  class="newsSpan">
+
+  <header class="news-nav">
+    <div class="np-inside container">
+      <div class="point-arrow"></div>
+      <ul class="label-nav">
+        <li><a id="0" href="#" class ="selected">技术博文</a></li>
+        <li><a id="1" href="#">业界新闻</a></li>
+      </ul>
+    </div>  
+  </header>
+
+<div class="news">
+      <div  class="rss-panel container"><div class='loadingPanel'><i class="fa fa-repeat"></i></div></span></div>
+       <div class="container" id="more"><a id="1" href="#news" class="morePage">加载更多</a></div>
+</div>
+
+</section>
+
+
+
+<section id="blog"class="content-paralax">
+  <div class="text-center">
+    <h1>BLOG</h1>
+    <h3>所见所闻 所思所想</h3>
+    <br/>
+    <br/>
+  </div>
+  </section>
+<section id="myblog" class="myblog">
+  <div class="container ">
+  <div id="blog-panel" class="blog-panel"></div>
+
+  </div>
+
+</section>
+
+<section id="msg" class="msg">
+  <div class="container msg-panel">
+<h2 class="comments-header"><i class="fa fa-comments"></i> comments</h2>
+<div id="SOHUCS"  sid="codecat"></div>
+<!--<div class="ds-thread" data-thread-key="index" data-title="CodeCat" data-url="http://codemao.com:8001"></div>-->
+<script>
+
+</script>  
+
+  </div>
+</section>
+</main>
+
+<footer class="siteFooter">
+  <div class="siteInfo">
+    <section class="copyright"><a href="codemao.com:8001">CodeCat </a>© 2014 • All rights reserved.</section>
+    <section  class="aboutsite">使用nodejs+mongodb构建</section>
+    <section class="powerdby">本站由<a target="_blank" href="http://weibo.com/u/1942959077">@codeMao</a>制作</section>
+  </div>
+</footer>
+
+<a href="#" id = "to-top" title="biu回顶部~"><i class="fa fa-angle-up"></i></a>
+
+
+    <script type="text/javascript">
+    getRSSnews();
+    showIndexBlog(null);
+
+  (function(){
+    var appid = 'cyrjEFRl8',
+    conf = 'prod_657dbd798480db22bc7db13933aa93c7';
+    var doc = document,
+    s = doc.createElement('script'),
+    h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
+    s.type = 'text/javascript';
+    s.charset = 'utf-8';
+    s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
+    h.insertBefore(s,h.firstChild);
+  })()
+
+    </script>
+  
+</body>
+</html>

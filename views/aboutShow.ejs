@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>codeMao's secret garden</title>
+    
+    <meta name="description" content="impress.js is a presentation tool based on the power of CSS3 transforms and transitions in modern browsers and inspired by the idea behind prezi.com." />
+    <meta name="author" content="Bartek Szopka" />
+
+    <link href="/stylesheets/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>你的浏览器真是太太太太太太太太太糟糕了吖亲～</p>
+    <p>为了获得更好的体验效果以及特效请更换浏览器．</p>
+    <p>强烈推荐以下浏览器 <b>Chrome</b>, <b>Safari</b> 或者 <b>Firefox</b> </p>
+    <p>如果已经在使用以上浏览器，那么恭喜你穿越了！请更新到最新版吧！</p>
+</div>
+<div id="impress">
+
+    <div id="welcome" class="step" data-x="-1000" data-y="-1500">
+        <center>
+        	<h2>欢迎"误"入</h2>
+        	<h1>秘(tu)密(cao)空间</h1>
+        </center>
+    </div>
+  
+    <div  class="step" data-x="0" data-y="-1500">
+        <center>
+        <p>不得不说<a href="http://codemao.com:8001" target="_blank">Code.Cat</a>的页面设计</p>
+        <p>缺少流畅感，存在违和感</p>
+        <p>我猜作为浏览者的你也有这样的感觉吧-_-!</p>
+        <p>我们就一起来看看那些被我借(shan)鉴(zhai)的设计吧～</p>
+        </center>
+    </div>
+    <div class="step" data-x="0" data-y="0">
+       <img class="showPanel" src="/images/about/1.jpg" alt="">
+        <p>这是Uno作者的<a href="http://daleanthony.com/" target="_blank">demo</a>啦～</p>
+        <p><a href="https://github.com/daleanthony/uno" target="_blank">Uno</a>是一种基于Ghost的主题</p>
+        <p>若不知道ghost,自行将该词脑补成wordpress,不过ghost是采用nodejs开发而非php</p>
+    </div>
+     <div id="show2" class="step" data-x="0" data-y="0"  data-z="-1000"  data-rotate-x="45" data-rotate-y="0" >
+          <img class="showPanel" src="/images/about/2.jpg" alt="">
+          <p><a href="https://coderwall.com" target="_blank">coderwall</a>一个为geek们提供交流平台的社区网站</p>
+          <p>当初在考虑资讯新闻列表做成什么样的时候</p>
+          <p>没日没夜的翻看国内外各种设计都没有看到专门围绕着列表而做的设计</p>
+          <p>偶然间发现了coderwall，点进去后，觉得这个样式还不错，虽然现在来看又觉得挺一般的了X＿X</p>
+    </div>
+
+
+    <div class="step" data-x="1000" data-y="-1500" >
+        <center>
+            <h1>关于第三方社交评论插件</h1>
+        </center>
+    </div>
+     <div class="about-comment step" data-x="1300" data-y="0" data-rotate="90">
+        <ul>
+            <li>
+                <h2>多说</h2>
+                <p><strong>优点</strong>: 不管是插件功能,api接口还是后台评论管理都非常丰富全面</p>
+                <p><strong>缺点</strong>: 原生外观设计在三者中略逊一筹，但最主要的问题是服务器太不稳定，在我使用了的那几天经常加载不了</p>
+            </li>
+            <li>
+                <h2>友言</h2>
+                <p><strong>优点</strong>: 原生外观以及使用方便性在三者中最好</p>
+                <p><strong>缺点</strong>: 但是没有提供类似多说那样全面的api接口,只能直接调用插件,因此可定制性太差</p>
+            </li>
+            <li>
+                <h2>畅言</h2>
+                <p><strong>优点</strong>: 插件功能,api接口和后台评论管理强于友言弱于多说,原生界面也是居中,但是服务器很稳定,能保证插件的正常加载,这也是最后使用它的主要原因</p>
+                <p><strong>缺点</strong>: 后台管理功能的用户体验以及功能全面性不够好</p>
+            </li>
+        </ul>
+    </div>
+    <div class="about-comment step" data-x="1300" data-y="0" data-rotate="90">
+
+    
+
+
+
+  </div><!--<div id="impress">-->
+
+
+
+<div class="hint">
+    <p>使用空格或方向键控制</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<script src="/javascripts/impress.js"></script>
+<script>impress().init();</script>
+
+
+
+</body>
+</html>

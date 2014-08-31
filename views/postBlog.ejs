@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>A Simple Page with CKEditor</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Make sure the path to CKEditor is correct. -->
+        <script src="/ckeditor/ckeditor.js"></script>
+         <script src="/javascripts/submitBlog.js"></script>
+         <script src="/javascripts/getArticles.js"></script>
+
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>  
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+         <link rel="stylesheet" href="/stylesheets/admin.css">
+
+         <script>
+        function htmlDecode(value){
+            return $('<div />').html(value).text();
+        }
+$(function(){
+             $('#postBtn').click(function(){
+                var blogContent = CKEDITOR.instances.editor1.getData();
+                var title = $("#blogTitle").val();
+                 var indexPic = $("#indexPic").val();
+
+                submitBlog(title, blogContent, indexPic);
+         });
+              $('#updateBtn').click(function(){
+                var title =  $("#blogTitle").val();
+                var blogId = $(".list-ol li.active").find("a").attr('id');
+                var indexPic = $("#indexPic").val();
+                var content = CKEDITOR.instances.editor1.getData();
+  
+               updateBlog(title, blogId, content, indexPic);
+
+         });
+});
+
+
+
+$(document).on("click", ".blog-list li a",function(){
+    var title = htmlDecode($(this).find(".entry-title").html());
+      var blogId = this.getAttribute('id');
+    $(".list-ol li").removeClass("active");
+    $(this).parent().addClass("active");
+   showBlogContent(title, blogId);
+    
+});       
+
+$(document).on("click", ".rmBtn span",function(){
+    var blogId = $(this).parent().parent().find("a").attr('id');
+  
+    delBlog(blogId);
+
+
+});          
+         </script>
+    </head>
+    <body style="background-color: #edece4;">
+        <header class="blog-nav">
+            <ul class="nav navlist"  role="tablist">
+                <li><a><img class="avatar" src="/images/blog-image.png" alt="Avatar"><%=admin%></a></li>
+                <li><a href="/">返回首页</a></li>
+                <li><a href="/logout">登出</a></li>
+            </ul>
+                
+        </header>
+
+
+<main class="show-panel">
+
+    <section class="content-view-container">
+        <section class="blog-list-container">
+            <header class="blog-list-header">所有文章</header>
+
+        <section class="blog-list">
+            <ol class="list-ol"></ol>
+        </section>
+        </section>
+
+        <section class="show-blog">
+        <form id="form-work">
+      
+                <label for="title">文章标题</label><br />
+                <input type="text" id="blogTitle" name="title" class="form-control">
+                <label for="title">首页展示图片</label><br />
+                <input type="text" id="indexPic" name="title" class="form-control">
+
+            <label for="title">文章内容</label><br />
+            <textarea name="editor1" id="editor1" rows="100" cols="1000">This is my textarea to be replaced with CKEditor.</textarea>
+            <script>
+            // Replace the <textarea id="editor1"> with a CKEditor
+            // instance, using default configuration.
+
+            CKEDITOR.replace( 'editor1');
+
+        </script>
+    </form>
+    <div  id="postBtn"  type="button"  class="btn btn-default">发表文章</div>
+    <div   id="updateBtn" type="button" class="btn btn-default">更新</div>
+    </section>
+
+    </section>
+    
+</main>
+
+    <script>
+ showBlogList();
+
+
+    </script>
+    </body>
+</html>
